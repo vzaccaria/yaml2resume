@@ -1,0 +1,128 @@
+\documentclass[margin]{res}
+\setlength{\textwidth}{5.1in} 
+
+\usepackage{fontspec} 
+\usepackage{fontspec,xunicode,xltxtra}
+\defaultfontfeatures{Mapping=tex-text} 
+\setmainfont[Scale=0.9]{Minion Pro}
+\usepackage{soul}
+\newcommand{\amper}{ {\fontspec[Scale=.95]{Enriqueta}\selectfont\itshape\&} }
+\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={Vittorio Zaccaria - vita},pdfauthor={Vittorio Zaccaria}]{hyperref}  
+\usepackage{xcolor}
+\linespread{1.1}
+
+\definecolor{tuscany}{cmyk}{0, 1, 0.9, 0.4}
+
+% \usepackage[tracking=smallcaps,expansion=alltext,protrusion=true]{microtype}‌​
+\usepackage[protrusion=true]{microtype}
+\SetTracking[spacing={25*,166,}]{encoding=*,shape=sc}{50}
+
+\hypersetup{linkcolor=blue,citecolor=black,filecolor=black,urlcolor=blue} 
+
+
+
+\begin{document}
+\moveleft.4\hoffset\centerline{ \color{tuscany}{\LARGE{\so{VITTORIO ZACCARIA} } } }
+\moveleft.5\hoffset\centerline{ \so{\textsc{ {{ address.institution }} ---  {{ address.state }} }}}
+\moveleft.5\hoffset\centerline{ \so{\textsc{ {{ address.phone }} ---  {{ address.url }}  }}}
+\moveleft\hoffset\vbox{\hrule width \resumewidth height 0.5pt}\smallskip
+\begin{resume}
+ 
+\section{\so{\textsc{statement}}} 
+{{ statement }} 
+
+\section{\so{\textsc{education}}}
+    {% for edu in education %}
+	{\bf {{ edu.description }} }                 \hfill \underline{ {{ edu.where }} }\\
+		{{edu.from}} --- {{ edu.to }} \\
+                	{{ edu.topic }} 
+    {% endfor %}
+ 
+
+
+\section{\so{\textsc{relevant experience}}}
+    {% for j in experience %}
+{\bf {{ j.title }} } \hfill            {{ j.from }} --- {{ j.to }} \\
+                {{ j.institution }} \hfill \underline{ {{ j.where }} }
+                 \begin{itemize}  \itemsep -2pt 
+                 {% for d in j.description %}
+                 \item {{ d }}
+                 {% endfor %}
+                \end{itemize} 
+    {% endfor %}
+                    
+                   
+\section{\so{\textsc{other experience}}}
+    {% for j in other %}
+{\bf {{ j.title }} }  \hfill            {{ j.from }} --- {{ j.to }} \\
+                {{ j.institution }} \hfill \underline{ {{ j.where }} }
+                 \begin{itemize}  \itemsep -2pt 
+                 {% for d in j.description %}
+                 \item {{ d }}
+                 {% endfor %}
+                \end{itemize} 
+    {% endfor %}
+
+
+\section{\so{\textsc{relevant publications}}}
+
+{\bf Books}
+
+\begin{enumerate}
+\item
+  V. Zaccaria \emph{et al.}, \textbf{Power Estimation and Optimization
+  Methodologies for VLIW-based Embedded Systems}, 203 pages - Kluwer
+  Academic Publishers - Boston/Dordrecht/London, April 2003. {[}
+  \href{http://www.worldcat.org/isbn/1-4020-7377-1}{isbn} {]}
+\end{enumerate}
+
+{\bf Patents}
+
+\begin{enumerate}
+\item
+  A. Pagni \emph{et al.}, \emph{Process for translating instructions for
+  an arm-type processor into instructions for a LX-type processor;
+  relative translator device and computer program product} - 2007 -
+  number: \textbf{US 7,243,213} - type: \textbf{granted} 
+\item
+  M. Sami \emph{et al.}, \emph{Processor architecture} - 2005 - number:
+  \textbf{US 6,889,317} - type: \textbf{granted} 
+\item
+  A. Pagni \emph{et al.}, \emph{Process for translating instructions for
+  an arm-type processor into instructions for a LX-type processor;
+  relative translator device and computer program product} - 2004 -
+  number: \textbf{US 225,869} - type: \textbf{(A1 - application)} 
+\item
+  M. Sami \emph{et al.}, \emph{Processor architecture} - 2002 - number:
+  \textbf{US 124,155} - type: \textbf{(A1 - application)} 
+\end{enumerate}
+
+\section{\so{\textsc{skills}}}
+    {% for j in skills %}
+{\bf {{ j.field }} }  \hfill            \\
+                 {% for t in j.topics %} {{ t }} --- {% endfor %}
+    {% endfor %}
+
+
+\section{\so{\textsc{awards}}}
+    {% for j in awards %}
+{\bf {{ j.award }} }  \hfill            {{ j.date}} \\
+                {{ j.reason }} 
+   {% endfor %}
+
+\section{\so{\textsc{spoken languages}}}
+    \begin{itemize}
+    {% for a in languages %}
+    \item {\bf {{ a.name }} } --- {{ a.level }} 
+   {% endfor %}
+   \end{itemize}
+
+
+\vfill
+ 
+\end{resume}
+\end{document}
+
+
+
+

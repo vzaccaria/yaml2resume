@@ -1,0 +1,88 @@
+# Contact
+
+**Vittorio Zaccaria**:
+
+* VITTORIO ZACCARIA
+* {{ address.institution }} ---  {{ address.state }}
+* {{ address.phone }} ---  {{ address.url }}
+
+# Statement
+{{ statement }} 
+
+# Relevant employers
+
+{% for j in experience %}
+
+## **{{ j.title }}** - {{ j.institution }}, {{ j.where }}
+
+* {{ j.from }} --- {{ j.to }} 
+* Job description:
+
+  {% for d in j.description %}
+  - {{ d }}
+  {% endfor %}
+
+{% endfor %}
+
+# Education
+
+# Other employers
+
+{% for j in other %}
+
+## **{{ j.title }}** - {{ j.institution }}, {{ j.where }}
+
+* {{ j.from }} --- {{ j.to }} 
+* Job description:
+
+  {% for d in j.description %}
+  - {{ d }}
+  {% endfor %}
+
+{% endfor %}
+
+# Education
+
+{% for edu in education %}
+## {{ edu.description }} --- __{{ edu.where }}__
+
+* {{edu.from}} --- {{ edu.to }}
+* {{ edu.topic }} 
+{% endfor %}
+
+
+# Patents 
+
+* A. Pagni et al., Process for translating instructions for
+  an arm-type processor into instructions for a LX-type processor;
+  relative translator device and computer program product - 2007 -
+  number: US 7,243,213 - type: granted 
+
+* M. Sami et al., Processor architecture - 2005 - number:
+  US 6,889,317 - type: granted 
+
+* A. Pagni et al., Process for translating instructions for
+  an arm-type processor into instructions for a LX-type processor;
+  relative translator device and computer program product - 2004 -
+  number: US 225,869 - type: (A1 - application) 
+
+* M. Sami et al., Processor architecture - 2002 - number:
+  US 124,155 - type: (A1 - application) 
+
+# Skills
+
+{% for j in skills %}
+* **{{ j.field }}**: {% for t in j.topics %} {{ t }} --- {% endfor %}
+{% endfor %}
+
+# Spoken languages
+
+{% for a in languages %}
+* **{{ a.name }}** --- {{ a.level }} 
+{% endfor %}
+
+
+
+
+
+

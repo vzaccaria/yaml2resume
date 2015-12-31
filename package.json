@@ -1,0 +1,40 @@
+{
+  "name": "yaml2resume",
+  "version": "0.0.1",
+  "description": "No name given yet",
+  "main": "index.js",
+  "bin": {
+    "yaml2resume": "./index.js"
+  },
+  "man": "./man/man1/yaml2resume.1",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vzaccaria/yaml2resume.git"
+  },
+  "author": "Vittorio Zaccaria",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/vzaccaria/yaml2resume/issues"
+  },
+  "homepage": "https://github.com/vzaccaria/yaml2resume",
+  "dependencies": {
+    "js-yaml": "^3.4.6",
+    "liquid-node": "^2.6.1",
+    "zaccaria-cli": "^0.1.1"
+  },
+  "devDependencies": {
+    "diy-build": "^1.0.8",
+    "babel": "^4.7.16",
+    "shelljs": "*",
+    "xyz": "*",
+    "mocha": "*",
+    "chai": "*",
+    "chai-as-promised": "*",
+    "mustache": "~2.1.2",
+    "stupid-replace": "~0.0.3",
+    "git-hist": "*"
+  }
+}
