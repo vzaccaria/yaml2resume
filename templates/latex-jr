@@ -1,0 +1,80 @@
+\documentclass[margin]{res}
+\setlength{\textwidth}{5.1in}
+
+\usepackage{fontspec}
+\usepackage{fontspec,xunicode,xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Scale=0.9]{Minion Pro}
+\usepackage{soul}
+\newcommand{\amper}{ {\fontspec[Scale=.95]{Enriqueta}\selectfont\itshape\&} }
+\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={ {{ basics.name }} - vita},pdfauthor={ {{ basics.name }} }]{hyperref}
+\usepackage{xcolor}
+\linespread{1.1}
+
+\definecolor{tuscany}{cmyk}{0, 1, 0.9, 0.4}
+
+% \usepackage[tracking=smallcaps,expansion=alltext,protrusion=true]{microtype}‌​
+\usepackage[protrusion=true]{microtype}
+\SetTracking[spacing={25*,166,}]{encoding=*,shape=sc}{50}
+
+\hypersetup{linkcolor=blue,citecolor=black,filecolor=black,urlcolor=blue}
+
+
+
+\begin{document}
+\moveleft.4\hoffset\centerline{ \color{tuscany}{\LARGE{\so{ {{ basics.name | upcase }} } } } }
+\moveleft.5\hoffset\centerline{ \so{\textsc{ {{ basics.location.address | downcase }} ---  {{ basics.location.countryCode | downcase }} }}}
+\moveleft.5\hoffset\centerline{ \so{\textsc{ {{ basics.phone }} ---  {{ basics.website }}  }}}
+\moveleft\hoffset\vbox{\hrule width \resumewidth height 0.5pt}\smallskip
+\begin{resume}
+
+\section{\so{\textsc{statement}}}
+{{ basics.summary }}
+
+\section{\so{\textsc{education}}}
+    {% for edu in education %}
+  {\bf {{ edu.studyType }} in {{ edu.area }}  }                 \hfill \underline{ {{ edu.institution}} }\\
+    {{edu.startDate | date: '%Y' }} --- {{ edu.endDate | date: '%Y' }} \\
+                  {{ edu.topic }}
+    {% endfor %}
+
+
+
+\section{\so{\textsc{relevant experience}}}
+    {% for j in work %}
+{\bf {{ j.position }} } \hfill            {{ j.startDate | date: '%Y' }} --- {{ j.endDate | date: '%Y' }} \\
+                {{ j.company }} \hfill \underline{ {{ j.address }} }
+                 \begin{itemize}  \itemsep -2pt
+                 {% for d in j.highlights %}
+                 \item {{ d }}
+                 {% endfor %}
+                \end{itemize}
+    {% endfor %}
+
+
+
+\section{\so{\textsc{skills}}}
+    {% for j in skills %}
+{\bf {{ j.name }} }  \hfill            \\
+                 {% for t in j.keywords %} {{ t }} --- {% endfor %}
+    {% endfor %}
+
+
+\section{\so{\textsc{awards}}}
+    {% for j in awards %}
+{\bf {{ j.title }} }  \hfill            {{ j.date}} \\
+                {{ j.summary }}
+   {% endfor %}
+
+\section{\so{\textsc{spoken languages}}}
+    \begin{itemize}
+    {% for a in languages %}
+    \item {\bf {{ a.language }} } --- {{ a.fluency }}
+   {% endfor %}
+   \end{itemize}
+
+
+\vfill
+
+\end{resume}
+\end{document}

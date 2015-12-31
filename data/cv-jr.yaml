@@ -1,0 +1,154 @@
+---
+  basics:
+    name: Vittorio Zaccaria
+    label: Assistant professor
+    picture:
+    email: vittorio.zaccaria@polimi.it
+    phone: +39 339 5266808
+    website: www.vittoriozaccaria.net
+    summary: "I leverage my love of learning and mastery of computer engineering to transform ideas to products. In my industrial and academic experience I discovered that team coordination and leadership are at least as important as technical competence for a successful project outcome. I feel that these abilities have become natural to me and that is why I want to step up to the next level."
+    location:
+      address: "Politecnico di Milano - Piazza Leonardo da Vinci, 32"
+      postalCode: "20133"
+      city: Milan
+      countryCode: Italy
+
+    profiles:
+      - network: Twitter
+        username:
+        url:
+
+
+  languages:
+    -
+      language: "Italian"
+      fluency: "Native"
+
+    -
+      language: "English"
+      fluency: "Fluent"
+
+  education:
+    -
+      startDate: '1992-09-01'
+      endDate: '1998-06-08'
+      institution: "Politecnico di Milano, Italy"
+      area: "Computer engineering"
+      studyType: "Master"
+      topic: "Java agents for a distributed file system."
+    -
+      startDate: '1998-09-01'
+      endDate: '2002-01-01'
+      institution: "Politecnico di Milano, Italy"
+      area: "Computer engineering"
+      studyType: "Ph.D"
+      topic: "Power consumption estimation and optimization of VLIW processors. Sponsored by STMicroelectronics."
+
+  work:
+    -
+      position: "Assistant Professor"
+      startDate: '2009-01-01'
+      company: "Politecnico di Milano"
+      address: "Milan, Italy"
+      highlights:
+        - "Developed support tools for web development such as \\textsc{webmake} (a tool for managing builds of front-end/back-end systems in Javascript) and \\textsc{fluent-fsm} for easily specifying finite state machines in web applications."
+        - "Specified and developed the \\textsc{ReSPIR} optimization algorithm for processor/SoC optimization. It enables efficient IP reuse in the context of virtual platforms (10x reduction in time, less than 1\\% error w.r.t. ideal)."
+        - "Succesfully brought a team of 5 people to prototype a new type of video-surveillance system in the context of the 2PARMA FP7 European Project."
+        - "Led a team of 3 engineers to prototype a research software tool for processor customization. Prototypes were delivered on-time and within budget of several european FP7 projects."
+    -
+      startDate: 2004-01-01
+      endDate: 2007-01-01
+      position: "Research and Development Engineer"
+      company: "STMicroelectronics"
+      address: "Lugano, Switzerland"
+      highlights:
+        - "Specified, prototyped and validated several ST200 processor architectural extensions. Vertical validation of the extensions from the ISA up to the application-layer/OS."
+        - "Enabled secure co-hosting of more operating systems by means of secure storage extensions of the ST200 architecture."
+        - "Collaborated to the specification, validation (by means of functional and timing simulation) and architectural exploration for symmetric multi-processing based on ST200."
+        - "Architectural specification and design of multi-threaded architectures based on stream-programming paradigms."
+    -
+      startDate: 2003-01-01
+      endDate: 2004-01-01
+      position: "Research Consultant"
+      company: "STMicroelectronics"
+      address: "Milan, Italy"
+      highlights:
+        - "Pioneered the field of Power Modeling of VLIW Cores (10\\% error RTL vs Gate-level)."
+        - "Introduced an effective methodology to minimize the effort of design of experiments for NoC power models (10x reduction in characterization time, 33\\% error)."
+    -
+      startDate: 2007-01-01
+      endDate: 2009-01-01
+      position: "Research Associate"
+      company: "Politecnico di Milano"
+      address: "Milan, Italy"
+      highlights:
+        - "Introduced advanced techniques for managing design of experiments and response surface methods in automatic design space exploration for multi-processors."
+        - "Extended classical design space exploration to tackle the problem of process-variability-aware design of multi-processors."
+  skills:
+    -
+      name: "General software design"
+      keywords:
+        - "version control (SVN/GIT)"
+        - "semantic versioning"
+        - "agile development"
+        - "test driven design"
+        - "DSL and fluent interface design"
+        - "web services"
+        - "representational state transfer interfaces"
+        - "shared memory multi-processing"
+        - "message passing multiprocessing"
+        - "dataflow programming"
+        - "object oriented programming"
+        - "asynchronous programming"
+    -
+      name: "General hardware design"
+      keywords:
+        - "processor-platform and IP selection and customization"
+        - "benchmarking and application customization"
+        - "strategic and emergent R\\&D directions for platform development"
+    -
+      name: "Artificial languages"
+      keywords:
+        - "C"
+        - "C++"
+        - "Javascript"
+        - "Coffeescript"
+        - "Python"
+        - "Haskell (Basics)"
+        - "Java - JVM Based Languages such as Groovy"
+        - "Ruby"
+        - "JSON"
+        - "RISC assembly"
+        - "ST200 Assembly"
+    -
+      name: "Processor architecture design"
+      keywords:
+        - "instruction set simulation"
+        - "event-driven simulation"
+        - "virtual platforms"
+        - "cache simulation"
+        - "Instruction-level power modeling"
+    -
+      name: "Embedded Systems Design"
+      keywords:
+        - "Interrupt programming"
+        - "Supervisor-mode programming"
+        - "Co-hosting"
+        - "Virtual Memory"
+        - "Linux internals"
+        - "Notions of device driver programming"
+        - "Notions of system bring up"
+        - "Notions of CPU scheduling algorithms"
+  awards:
+    -
+      date: "2002"
+      title: "Dimitris N. Chorafas Award"
+      summary: "for the exceptional contribution to the state of the art of research in processor architecture."
+    -
+      date: "2010"
+      title: "HiPEAC Award"
+      summary: "as a co-author of 'A Correlation-Based Design Space Exploration Methodology for Multiprocessor Systems-on-Chip' published at DAC 2010."
+    -
+      date: "2012"
+      title: "2nd runner up at the Idea2Product Global Competition 2012"
+      summary: "for creating a valuable opportunity for product commercialization of research results."
