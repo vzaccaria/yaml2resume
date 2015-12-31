@@ -11,6 +11,7 @@ var $r = _require.$r;
 var $b = _require.$b;
 var withTmpDir = _require.withTmpDir;
 var $s = _require.$s;
+var _ = _require._;
 
 var yaml = require("js-yaml").safeLoad;
 var liquid = require("liquid-node");
@@ -19,10 +20,11 @@ var getOptions = function (doc) {
     "use strict";
     var o = $d(doc);
     var help = $o("-h", "--help", false, o);
-    var template = $o("-t", "--template", "markdown", o);
+    var template = $o("-t", "--template", "latex-jr", o);
     var latex = $o("-l", "--latex", false, o);
+    var list = _.get(o, "list", false);
     return {
-        help: help, template: template, latex: latex
+        help: help, template: template, latex: latex, list: list
     };
 };
 
@@ -33,10 +35,16 @@ var main = function () {
         var help = _getOptions.help;
         var template = _getOptions.template;
         var latex = _getOptions.latex;
+        var list = _getOptions.list;
 
         if (help) {
             console.log(it);
         } else {
+            if (list) {
+                console.log("Available templates:");
+                console.log($s.ls("" + __dirname + "/templates"));
+                process.exit(0);
+            }
             $b.all([$r.stdin(), $f.readLocal("templates/" + template)]).spread(function (data, file) {
                 var engine = new liquid.Engine();
                 engine.parse(file).then(function (it) {
@@ -60,8 +68,6 @@ var main = function () {
                                 $s.cp("-f", "file.pdf", "" + cwd + "/resume.pdf");
                             });
                         }, { unsafeCleanup: true });
-                    } else {
-                        console.log(it);
                     }
                 });
             });

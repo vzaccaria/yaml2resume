@@ -1,6 +1,6 @@
 /* eslint quotes: [0], strict: [0] */
 var {
-    $d, $o, $f, $r, $b, withTmpDir, $s
+    $d, $o, $f, $r, $b, withTmpDir, $s, _
 } = require('zaccaria-cli')
 
 let yaml = require('js-yaml').safeLoad;
@@ -10,21 +10,27 @@ var getOptions = doc => {
     "use strict"
     var o = $d(doc)
     var help = $o('-h', '--help', false, o)
-    var template = $o('-t', '--template', 'markdown', o);
+    var template = $o('-t', '--template', 'latex-jr', o);
     var latex = $o('-l', '--latex', false, o);
+    var list = _.get(o, 'list', false)
     return {
-        help, template, latex
+        help, template, latex, list
     }
 }
 
 var main = () => {
     $f.readLocal('docs/usage.md').then(it => {
         var {
-            help, template, latex
+            help, template, latex, list
         } = getOptions(it);
         if (help) {
             console.log(it)
         } else {
+            if(list) {
+                console.log("Available templates:");
+                console.log($s.ls(`${__dirname}/templates`))
+                process.exit(0);
+            }
             $b.all([$r.stdin(), $f.readLocal(`templates/${template}`)]).spread((data, file) => {
                 let engine = new liquid.Engine
                 engine.parse(file).then((it) => {
@@ -48,8 +54,6 @@ var main = () => {
                                 $s.cp('-f', 'file.pdf', `${cwd}/resume.pdf`);
                             })
                         }, { unsafeCleanup: true })
-                    } else {
-                        console.log(it);
                     }
                 })
             })
