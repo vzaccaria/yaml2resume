@@ -1,6 +1,6 @@
 /* eslint quotes: [0], strict: [0] */
 var {
-    $d, $o, $f, $r, $b, withTmpDir, $s, _
+    $d, $o, $f, $r, $b, withTmpDir, $s, _, $fs
 } = require('zaccaria-cli')
 
 let yaml = require('js-yaml').safeLoad;
@@ -12,16 +12,18 @@ var getOptions = doc => {
     var help = $o('-h', '--help', false, o)
     var template = $o('-t', '--template', 'latex-jr', o);
     var latex = $o('-l', '--latex', false, o);
+    var json = $o('-j', '--json', false, o);
+    var isAbsolute = template.charAt(0) == '.' || template.charAt(0) == '/';
     var list = _.get(o, 'list', false)
     return {
-        help, template, latex, list
+        help, template, latex, list, json, isAbsolute
     }
 }
 
 var main = () => {
     $f.readLocal('docs/usage.md').then(it => {
         var {
-            help, template, latex, list
+            help, template, latex, list, json, isAbsolute
         } = getOptions(it);
         if (help) {
             console.log(it)
@@ -31,10 +33,21 @@ var main = () => {
                 console.log($s.ls(`${__dirname}/templates`))
                 process.exit(0);
             }
-            $b.all([$r.stdin(), $f.readLocal(`templates/${template}`)]).spread((data, file) => {
+            let filePromise;
+            if(isAbsolute) {
+                filePromise = $fs.readFileAsync(template, 'utf-8')
+            } else {
+                filePromise = $f.readLocal(`templates/${template}`)
+            }
+            $b.all([$r.stdin(), filePromise]).spread((data, file) => {
                 let engine = new liquid.Engine
+                if(json) {
+                    data = JSON.parse(data)
+                } else {
+                    data = yaml(data);
+                }
                 engine.parse(file).then((it) => {
-                    return it.render(yaml(data));
+                    return it.render(data);
                 }).then((it) => {
                     if (latex) {
                         return withTmpDir((path) => {
