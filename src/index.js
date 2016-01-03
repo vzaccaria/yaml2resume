@@ -26,6 +26,13 @@ var getOptions = doc => {
     }
 }
 
+
+let myFilters = {
+    sortBy: (input, key) => {
+        return _.sortBy(input, key);
+    }
+}
+
 class CustomFileSystem extends liquid.BlankFileSystem {
 
     readTemplateFile(pth) {
@@ -62,6 +69,7 @@ var main = () => {
 
                 let engine = new liquid.Engine
                 engine.fileSystem = new CustomFileSystem
+                engine.registerFilters(myFilters)
                 if (json) {
                     data = JSON.parse(data)
                 } else {

@@ -43,6 +43,12 @@ var getOptions = function (doc) {
     };
 };
 
+var myFilters = {
+    sortBy: function (input, key) {
+        return _.sortBy(input, key);
+    }
+};
+
 var CustomFileSystem = (function (_liquid$BlankFileSystem) {
     function CustomFileSystem() {
         _classCallCheck(this, CustomFileSystem);
@@ -98,6 +104,7 @@ var main = function () {
 
                 var engine = new liquid.Engine();
                 engine.fileSystem = new CustomFileSystem();
+                engine.registerFilters(myFilters);
                 if (json) {
                     data = JSON.parse(data);
                 } else {
