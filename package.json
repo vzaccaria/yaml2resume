@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/vzaccaria/yaml2resume",
   "dependencies": {
+    "debug": "^2.2.0",
     "js-yaml": "^3.4.6",
     "liquid-node": "^2.6.1",
     "zaccaria-cli": "^0.1.1"
