@@ -19,7 +19,7 @@ var getOptions = doc => {
     var latex = $o('-l', '--latex', false, o);
     var json = $o('-j', '--json', false, o);
     var c = template.charAt(0)
-    var isAbsolute = (c !== '.') || ( c !== '/')
+    var isAbsolute = (c === '.' ||  c === '/')
     var list = _.get(o, 'list', false)
     return {
         help, template, latex, list, json, isAbsolute

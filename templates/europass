@@ -1,0 +1,72 @@
+% !TEX encoding = UTF-8
+% !TEX program = pdflatex
+% !TEX spellcheck = en_GB
+
+\documentclass[english,a4paper]{europasscv}
+
+\ecvname{ {{ basics.name }} }
+\ecvaddress{ {{ basics.location.address}} }
+\ecvtelephone[ {{ basics.personalData.cellphone }} ]{ {{ basics.phone }} }
+\ecvemail{ {{ basics.email }} }
+\ecvhomepage{ {{ basics.website }} }
+
+\ecvdateofbirth{ {{ basics.personalData.bornDate }} }
+\ecvnationality{ {{ basics.personalData.nationality }} }
+\ecvgender{ {{ basics.personalData.gender }} }
+
+
+\begin{document}
+  \begin{europasscv}
+
+  \ecvpersonalinfo
+
+  \ecvsection{Work experience}
+
+{% for j in work %}
+\ecvtitle{ {{ j.startDate | date: '%Y' }} --- {{ j.endDate | date: '%Y' }} }{ {{ j.position }} }
+\ecvitem{}{ {{ j.company }} \newline  {{ j.address }} }
+\ecvitem{} {
+\begin{ecvitemize}
+{% for d in j.highlights %}
+\item {{ d }}
+{% endfor %}
+\end{ecvitemize}
+}
+{% endfor %}
+
+
+
+\ecvsection{Education and training}
+
+{% for edu in education %}
+\ecvtitle{ {{ edu.startDate | date: '%Y' }} --- {{ edu.endDate | date: '%Y' }} }{ {{ edu.studyType }} in {{ edu.area }} }
+\ecvitem{}{ {{ edu.institution }} }
+\ecvitem{}{Thesis title: {{ edu.topic }} }
+{% endfor %}
+
+
+\ecvsection{Personal skills}
+\ecvmothertongue{ {{ euroLanguages.mother }} }
+\ecvlanguageheader
+{% for l in euroLanguages.other %}
+\ecvlanguage{ {{ l.language }} }{ {{ l.levels[0] }} }{ {{ l.levels[1] }} }{ {{ l.levels[2] }} }{  {{ l.levels[3] }} }{ {{ l.levels[4] }} }
+{% endfor %}
+\ecvlanguagefooter
+
+
+{% for j in skills %}
+\ecvblueitem{ {{ j.name }} }{
+{% for t in j.keywords %} {{ t }} --- {% endfor %}
+}
+{% endfor %}
+
+
+\ecvsection{Awards}
+{% for j in awards %}
+\ecvblueitem{ {{ j.title }} }{ {{ j.date }} - {{ j.summary }} }
+{% endfor %}
+
+
+  \end{europasscv}
+
+\end{document}

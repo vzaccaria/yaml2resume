@@ -30,6 +30,14 @@ generateProject(_ => {
         _.cmd("chmod +x ./index.js")
     })
 
+    _.collectSeq("edit", _ => {
+        _.cmd("watchman ./templates/europass 'cat example-inputs/cv-jr.yaml | ./index.js -t europass -l'");
+    })
+
+    _.collectSeq("once", _ => {
+        _.cmd("cat example-inputs/cv-jr.yaml | DEBUG=* ./index.js -t europass -l");
+    })
+
     _.collect("test", _ => {
         _.cmd("make all")
         _.cmd("./node_modules/.bin/mocha ./lib/test.js")

@@ -3,15 +3,33 @@
     name: Vittorio Zaccaria
     label: Assistant professor
     picture:
+    phone: +39 02 2399 3642
     email: vittorio.zaccaria@polimi.it
-    phone: +39 339 5266808
     website: www.vittoriozaccaria.net
+
     summary: "I leverage my love of learning and mastery of computer engineering to transform ideas to products. In my industrial and academic experience I discovered that team coordination and leadership are at least as important as technical competence for a successful project outcome. I feel that these abilities have become natural to me and that is why I want to step up to the next level."
+
     location:
       address: "Politecnico di Milano - Piazza Leonardo da Vinci, 32"
       postalCode: "20133"
-      city: Milan
+      city: Milano (MI)
       countryCode: Italy
+
+    residence:
+      address: "Viale Varese 83"
+      postalCode: 22100
+      city: Como (CO)
+      countryCode: Italy
+
+    personalData:
+      CF: ZCCVTR73L10F839A
+      bornPlace: Napoli (NA)
+      bornDate: "10 Luglio 1973"
+      phone: +39 339 5266808
+      cellphone: +39 339 5266808
+      email: vittorio.zaccaria@gmail.com
+      nationality: "Italian"
+      gender: "male"
 
     profiles:
       - network: Twitter
@@ -28,7 +46,15 @@
       language: "English"
       fluency: "Fluent"
 
+  euroLanguages:
+    mother: "Italian"
+    other:
+      - language: "English"
+        levels: [ C1, C1, C1, C1, B2 ]
+
+
   education:
+
     -
       startDate: '1992-09-01'
       endDate: '1998-06-08'
@@ -36,28 +62,41 @@
       area: "Computer engineering"
       studyType: "Master"
       topic: "Java agents for a distributed file system."
+      dichiara: Di essere in possesso del titolo di studio di Laurea in Ingegneria Informatica, conseguito il 8 giugno 1998 presso il Politecnico di Milano con votazione 96/100.
+
     -
       startDate: '1998-09-01'
-      endDate: '2002-01-01'
+      endDate: '2002-11-15'
       institution: "Politecnico di Milano, Italy"
       area: "Computer engineering"
       studyType: "Ph.D"
       topic: "Power consumption estimation and optimization of VLIW processors. Sponsored by STMicroelectronics."
+      dichiara: Di essere in possesso del titolo di studio di Dottorato di Ricerca in Ingegneria Informatica e Automatica rilasciato il 15 novembre 2002 dal Politecnico di Milano.
+
+
+  currentWork:
+      position: "Assistant Professor"
+      startDate: '2009-11-01'
+      company: "Politecnico di Milano"
+      address: "Milan, Italy"
 
   work:
     -
       position: "Assistant Professor"
-      startDate: '2009-01-01'
+      startDate: '2009-11-01'
       company: "Politecnico di Milano"
       address: "Milan, Italy"
       highlights:
-        - "Developed support tools for web development such as \\textsc{webmake} (a tool for managing builds of front-end/back-end systems in Javascript) and \\textsc{fluent-fsm} for easily specifying finite state machines in web applications."
-        - "Specified and developed the \\textsc{ReSPIR} optimization algorithm for processor/SoC optimization. It enables efficient IP reuse in the context of virtual platforms (10x reduction in time, less than 1\\% error w.r.t. ideal)."
-        - "Succesfully brought a team of 5 people to prototype a new type of video-surveillance system in the context of the 2PARMA FP7 European Project."
-        - "Led a team of 3 engineers to prototype a research software tool for processor customization. Prototypes were delivered on-time and within budget of several european FP7 projects."
+        - Specified and developed the {ReSPIR} optimization algorithm for processor/SoC optimization. It enables efficient IP reuse in the context of virtual platforms (10x reduction in time, less than 1 percent error w.r.t. ideal).
+        - Succesfully brought a team of 5 people to prototype a new type of video-surveillance system in the context of the 2PARMA FP7 European Project.
+
+        - Led a team of 3 engineers to prototype a research software tool for processor customization. Prototypes were delivered on-time and within budget of several european FP7 projects.
+
+      dichiara: "Di prestare servizio come ricercatore a tempo indeterminato dal 1 marzo 2011 presso il Dipartimento di Elettronica e Informazione del Politecnico di Milano, e di avere prestato servizio come ricercatore a tempo determinato dal 1 novembre 2009 a fine Febbraio 2011 presso il Dipartimento di Elettronica e Informazione del Politecnico di Milano."
+
     -
-      startDate: 2004-01-01
-      endDate: 2007-01-01
+      startDate: 2004-05-01
+      endDate: 2007-03-27
       position: "Research and Development Engineer"
       company: "STMicroelectronics"
       address: "Lugano, Switzerland"
@@ -66,24 +105,38 @@
         - "Enabled secure co-hosting of more operating systems by means of secure storage extensions of the ST200 architecture."
         - "Collaborated to the specification, validation (by means of functional and timing simulation) and architectural exploration for symmetric multi-processing based on ST200."
         - "Architectural specification and design of multi-threaded architectures based on stream-programming paradigms."
+      dichiara: "Di avere prestato il seguente servizio: Research and Development Engineer presso l’Advanced Architecture Research group, AST-STMicroelectronics, Lugano (Svizzera), dal 1 maggio 2004 fino al 27 marzo 2007."
+
+
     -
-      startDate: 2003-01-01
-      endDate: 2004-01-01
+      startDate: 2003-04-01
+      endDate: 2004-03-31
       position: "Research Consultant"
       company: "STMicroelectronics"
       address: "Milan, Italy"
       highlights:
-        - "Pioneered the field of Power Modeling of VLIW Cores (10\\% error RTL vs Gate-level)."
-        - "Introduced an effective methodology to minimize the effort of design of experiments for NoC power models (10x reduction in characterization time, 33\\% error)."
+        - "Pioneered the field of Power Modeling of VLIW Cores (10 percent error RTL vs Gate-level)."
+        - "Introduced an effective methodology to minimize the effort of design of experiments for NoC power models (10x reduction in characterization time, 33 percent error)."
+      dichiara: "Di avere prestato il seguente servizio: Research Consultant presso il gruppo Low Power System Design, AST-STMicroelectronics, Agrate Brianza (Italia), dal 1 aprile 2003 al 31 marzo 2004."
+
     -
-      startDate: 2007-01-01
-      endDate: 2009-01-01
+      startDate: 2007-11-01
+      endDate: 2009-10-31
       position: "Research Associate"
       company: "Politecnico di Milano"
       address: "Milan, Italy"
       highlights:
         - "Introduced advanced techniques for managing design of experiments and response surface methods in automatic design space exploration for multi-processors."
         - "Extended classical design space exploration to tackle the problem of process-variability-aware design of multi-processors."
+
+  specializations:
+    - Computer aided design of digital circuits.
+    - Multi-processor design space exploration.
+    - Low-power and high-performance design.
+    - Parallel processor architectures.
+    - Advanced parallel programming paradigms.
+    - Compilation and simulation methodologies for multi-processor-based systems.
+
   skills:
     -
       name: "General software design"
@@ -152,3 +205,109 @@
       date: "2012"
       title: "2nd runner up at the Idea2Product Global Competition 2012"
       summary: "for creating a valuable opportunity for product commercialization of research results."
+
+  grants:
+    - { from: 2015 , to: 2016 , role: principal investigator , type: grant from industrial partner , institution:  STMicroelectronics , project:  Strumenti di Progettazione e Verifica per Circuiti Crittografici }
+    - { from: 2007 , to: 2008 , type: Research Grant         ,  institution: Politecnico di Milano ,
+      project: "Multi-Objective Design Space Exploration of Multi-Processor SOC Architectures for Embedded Multimedia Applications" }
+    - { from: 2002 , to: 2002 , type: Post-Doc Grant         , institution: Politecnico di Milano  , project: "Power estimation and exploration of the architectural space at the system level for systems-on-chip" }
+    - { from: 1999 , to: 2002 , type: Ph.D. Fellowship       , institution: STMicroelectronics     , project: "Methodologies for Power Estimation for VLIW Machines" }
+    - { from: 2002 , to: 2002 , type: Young Researcher Grant , institution: Italian Government     , project: "Methodologies for Power Estimation and Optimization in Embedded Processor Systems" }
+
+  committeesAndTalks:
+    - { name: ADAPT (co-located with HIPEAC 2014), year: 2014 , type: conference/workshop organization ,    ruolo: TPC member }
+    - { name: ADAPT (co-located with HIPEAC 2016), year: 2016 , type: conference/workshop organization ,    ruolo: reviewer }
+
+    - { name: ESTIMEDA                                                          , year: 2012 , type: conference/workshop organization ,    ruolo: Keynote Speaker  , address: Tampere - Finland }
+    - { name: Micro                                                             , year: 2008 , type: conference/workshop organization ,    ruolo: Local Committee  , address: Como - Italy }
+
+    - { name: 2PARMA Workshop (co-located with ARCS 2012)                       , year: 2012 , type: conference/workshop organization ,    ruolo: Program Co-Chair , address: Munich - Germany }
+    - { name: 2PARMA Workshop (co-located with ARCS 2011)                       , year: 2011 , type: conference/workshop organization ,    ruolo: TPC member       , address: Como - Italy }
+    - { name: 2PARMA Workshop (co-located with ARCS 2010)                       , year: 2009 , type: conference/workshop organization ,    ruolo: TPC member }
+
+    - { name: NoCArch                                                           , year: 2009 , type: conference/workshop organization ,    ruolo: TPC member }
+    - { name: NoCArch                                                           , year: 2008 , type: conference/workshop organization ,    ruolo: TPC member }
+    - { name: NoCArch                                                           , year: 2010 , type: conference/workshop organization ,    ruolo: TPC member }
+    - { name: NoCArch                                                           , year: 2012 , type: conference/workshop organization ,    ruolo: TPC member }
+
+    - { name: IEEE Transactions on Computer Aided Design of Integrated Circuits , year: 2001 , type: journal peer review              ,    ruolo: reviewer }
+    - { name: IEEE Transactions on Very Large Scale of Integration Circuits     , year: 2001 , type: journal peer review              ,    ruolo: reviewer }
+    - { name: IC-SAMOS                                                          , year: 2007 , type: conference/workshop organization ,    ruolo: reviewer }
+    - { name: SASP                                                              , year: 2007 , type: conference/workshop organization ,    ruolo: reviewer }
+    - { name: Journal of Low Power Electronics - JOLPE                          , year: 2009 , type: journal peer review              ,    ruolo: reviewer }
+
+    - { name: DATE                                                              , year: 2010 , type: conference/workshop organization ,    ruolo: Session Chair    , address: Dresden - Germany }
+    - { name: DATE                                                              , year: 2009 , type: conference/workshop organization ,    ruolo: Session Chair    , address: Nice - France }
+    - { name: DATE                                                              , year: 2001 , type: journal peer review              ,    ruolo: reviewer }
+    - { name: DATE - Track A8 (Multi-Core Platforms)                            , year: 2009 , type: conference/workshop organization ,    ruolo: TPC member }
+    - { name: DATE - Track A8 (Multi-Core Platforms)                            , year: 2008 , type: conference/workshop organization ,    ruolo: TPC member }
+
+  courses:
+    - { aaInit: "2015" , aaEnd: 2016 , courseName: Informatica B                                    , position: Titolare           , titolare: Vittorio Zaccaria  , level: laurea triennale in Ingegneria Meccanica ed Energetica , institution: Politecnico di Milano , crediti: 7}
+
+    - { aaInit: "2014" , aaEnd: 2015 , courseName: Informatica B                                    , position: Titolare           , titolare: Vittorio Zaccaria  , level: laurea triennale in Ingegneria Meccanica ed Energetica , institution: Politecnico di Milano , crediti: 7}
+
+    - { aaInit: "2013" , aaEnd: 2014 , courseName: Informatica B                                    , position: Titolare           , titolare: Vittorio Zaccaria  , level: laurea triennale in Ingegneria Meccanica ed Energetica , institution: Politecnico di Milano , crediti: 7}
+
+    - { aaInit: "2012" , aaEnd: 2013 , courseName: Informatica B                                    , position: Titolare           , titolare: Vittorio Zaccaria  , level: laurea triennale in Ingegneria Meccanica ed Energetica , institution: Politecnico di Milano , crediti: 7}
+
+    - { aaInit: "2011" , aaEnd: 2012 , courseName: Informatica B                                    , position: Titolare           , titolare: Vittorio Zaccaria  , level: laurea triennale in Ingegneria Meccanica ed Energetica , institution: Politecnico di Milano , crediti: 7}
+
+    - { aaInit: "2010" , aaEnd: 2011 , courseName: Informatica B                                    , position: Titolare           , titolare: Vittorio Zaccaria  , level: laurea triennale in Ingegneria Meccanica ed Energetica , institution: Politecnico di Milano , crediti: 7}
+
+    - { aaInit: "2001" , aaEnd: 2001 , courseName: Architectures                                    , position: Teaching assistant , titolare: Mariagiovanna Sami , level: Master of Engineering of Embedded Systems              , institution: Advanced Learning Institute - Lugano }
+
+    - { aaInit: "2002" , aaEnd: 2002 , courseName: Architectures                                    , position: Teaching assistant , titolare: Mariagiovanna Sami , level: Master of Engineering of Embedded Systems              , institution: Advanced Learning Institute - Lugano }
+
+    - { aaInit: "1999" , aaEnd: 2000 , courseName: Advanced Computer Architectures                  , position: Teaching assistant , titolare: Donatella Sciuto   , level: Master of Science in Electrical Engineering            , institution: University of Illinois at Chicago and Politecnico di Milano }
+
+    - { aaInit: "2000" , aaEnd: 2001 , courseName: Advanced Computer Architectures                  , position: Teaching assistant , titolare: Donatella Sciuto   , level: Master of Science in Electrical Engineering            , institution: University of Illinois at Chicago and Politecnico di Milano }
+
+    - { aaInit: "2001" , aaEnd: 2002 , courseName: Advanced Computer Architectures                  , position: Teaching assistant , titolare: Donatella Sciuto   , level: Master of Science in Electrical Engineering            , institution: University of Illinois at Chicago and Politecnico di Milano }
+
+    - { aaInit: "2009" , aaEnd: 2010 , courseName: Informatica B                                    , position: Teaching assistant , titolare: Danilo Ardagna     , level: Laurea di primo livello in Ingegneria Elettrica        , institution: Politecnico di Milano }
+
+    - { aaInit: "2009" , aaEnd: 2010 , courseName: Architectures for Multimedia Systems             , position: Teaching assistant , titolare: Cristina Silvano   , level: Laurea specialistica in Ingegneria Informatica         , institution: Politecnico di Milano }
+
+    - { aaInit: "2009" , aaEnd: 2010 , courseName: Architettura dei Calcolatori e Sistemi Operativi , position: Teaching assistant , titolare: Cristina Silvano   , level: Laurea di primo livello in Ingegneria Informatica      , institution: Politecnico di Milano }
+
+    - { aaInit: "2008" , aaEnd: 2009 , courseName: Architettura dei Calcolatori e Sistemi Operativi , position: Teaching assistant , titolare: Cristina Silvano   , level: Laurea di primo livello in Ingegneria Informatica      , institution: Politecnico di Milano }
+
+    - { aaInit: "2007" , aaEnd: 2008 , courseName: Metodologie di progetto hardware e software      , position: Teaching assistant , titolare: Cristina Silvano   , level: Laurea specialistica in Ingegneria Informatica         , institution: Politecnico di Milano }
+
+    - { aaInit: "2000" , aaEnd: 2001 , courseName: Sistemi Operativi 1                              , position: Teaching assistant , titolare: William Fornaciari , level: Laurea quinquennale in Ingegneria Informatica          , institution: Politecnico di Milano }
+
+    - { aaInit: "2001" , aaEnd: 2002 , courseName: Calcolatori Elettronici                          , position: Teaching assistant , titolare: Mariagiovanna Sami , level: Laurea quinquennale in Ingegneria Informatica          , institution: Politecnico di Milano }
+
+    - { aaInit: "2003" , aaEnd: 2003 , courseName: Calcolatori Elettronici                          , position: Teaching assistant , titolare: Anna Antola        , level: Laurea quinquennale in Ingegneria Informatica          , institution: Politecnico di Milano }
+
+
+  students:
+      - { name: Simone Borgio and Davide Bosisio     , title: OpenStreamC - a development framework for streaming applications }
+      - { name: Zhong Yi Hu                          , title: Power modeling of Networks-on-chip }
+      - { name: Fabrizio Lucini                      , title: Specification and design of a prefetch unit for translating code at run-time }
+      - { name: Simone Valsecchi                     , title: An algorithm for the efficient exploration of the architectural design space for microprocessor-based systems }
+      - { name: Gianluca Palermo                     , title: A methodology for architectural exploration and information encoding for low-power digital systems }
+      - { name: Alessandro Molgora and Claudio Lozza , title: Low-power state encoding techniques for finite state machines }
+      - { name: Marco Gavazzi                        , title: Low-power VLIW re-scheduling algorithms }
+      - { name: Lorenzo Salvemini                    , title: An architectural exploration methodology for low-power digital systems }
+      - { name: Andrea Bona                          , title: A design of experiments methodology in a power estimation flow for VLIW processors }
+
+  phdStudents:
+      - { name: Edoardo Paone   , institution: Politecnico di Milano }
+      - { name: Giovanni Mariani, institution: ALaRI - University of Lugano }
+      - { name: Fabrizio Castro , institution: Politecnico di Milano. }
+
+  europeanProjects:
+    - { type: FP7, yearInit: 2010, yearEnd: 2012, coordinator: Cristina Silvano, name: "PARallel PAradigms and Run-time MAnagement techniques for Many-core Architectures", highlights: [ "development team leader for an advanced production-grade language and interpreter supporting design space exploration", "integration activities of design space exploration tools within the context of the project itself." ] }
+
+    - { type: FP7, yearInit: 2008, yearEnd: 2010, coordinator: Cristina Silvano, name: "Multi-objective design space exploration of multi-processor SoC architectures for embedded multimedia applications" }
+
+  projects:
+    - Multicube Explorer — an architectural exploration framework retargetable to different processor-based architectures and exploration algorithms. The tool contains also advanced algorithms for DoE generation and response surface modeling. It is scheduled to go open-source in January 2009 — open-source.
+
+    - xSTreamC compiler and nSTream simulator — a development toolchain for applications based on the stream oriented programming model. The toolchain has been released open-source in October 2008 — open-source.
+
+    - ST200-ISS — a production-grade instruction set simulator for the ST200 VLIW processor family (functional and timing behavior models). Kernel, device components, cache-coherency, secure-storage, co-hosting — proprietary.
+
+    - Tools for run-time power estimation of STBus proprietary bus technology (C/SystemC). These tools are currently part of the internal STBus product work-flow — proprietary.
