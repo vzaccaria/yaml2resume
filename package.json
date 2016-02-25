@@ -1,6 +1,6 @@
 {
   "name": "yaml2resume",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "No name given yet",
   "main": "index.js",
   "bin": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/vzaccaria/yaml2resume/issues"
   },
   "homepage": "https://github.com/vzaccaria/yaml2resume",
-    "dependencies": {
+  "dependencies": {
     "babel": "4.7.16",
     "chai": "3.0.0",
     "chai-as-promised": "5.1.0",
@@ -36,7 +36,7 @@
     "stupid-replace": "0.0.3",
     "underscore.string": "3.2.2",
     "xyz": "0.5.0",
-        "zaccaria-cli": "0.2.0",
+    "zaccaria-cli": "0.2.0",
     "debug": "^2.2.0",
     "js-yaml": "3.4.6",
     "liquid-node": "2.6.1"
