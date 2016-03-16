@@ -73,7 +73,8 @@ var CustomFileSystem = (function (_liquid$BlankFileSystem) {
 })(liquid.BlankFileSystem);
 
 var main = function () {
-    $f.readLocal("docs/usage.md").then(function (it) {
+    var usageFileName = "docs/usage.md";
+    $fs.readFileAsync(usageFileName, "utf-8").then(function (it) {
         var _getOptions = getOptions(it);
 
         var help = _getOptions.help;
@@ -98,7 +99,7 @@ var main = function () {
                 filePromise = $fs.readFileAsync(template, "utf-8");
             } else {
                 debug("Normal path template filename ");
-                filePromise = $f.readLocal("templates/" + template);
+                filePromise = $fs.readFileAsync("" + __dirname + "/templates/" + template, "utf-8");
             }
             $b.all([$r.stdin(), filePromise]).spread(function (data, file) {
 

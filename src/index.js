@@ -44,7 +44,8 @@ class CustomFileSystem extends liquid.BlankFileSystem {
 
 
 var main = () => {
-    $f.readLocal('docs/usage.md').then(it => {
+    const usageFileName = 'docs/usage.md';
+    $fs.readFileAsync(usageFileName, 'utf-8').then(it => {
         var {
             help, template, latex, list, json, isAbsolute
         } = getOptions(it);
@@ -63,7 +64,7 @@ var main = () => {
                 filePromise = $fs.readFileAsync(template, 'utf-8')
             } else {
                 debug("Normal path template filename ");
-                filePromise = $f.readLocal(`templates/${template}`)
+                filePromise = $fs.readFileAsync(`${__dirname}/templates/${template}`, 'utf-8')
             }
             $b.all([$r.stdin(), filePromise]).spread((data, file) => {
 
