@@ -25,9 +25,12 @@
     "chai": "3.0.0",
     "chai-as-promised": "5.1.0",
     "chalk": "1.1.1",
+    "debug": "^2.2.0",
     "diy-build": "1.0.8",
     "easy-table": "1.0.0",
     "git-hist": "0.2.0",
+    "js-yaml": "3.4.6",
+    "liquid-node": "2.6.1",
     "mdtable2json": "0.1.0",
     "mocha": "2.2.5",
     "mustache": "2.1.2",
@@ -36,9 +39,6 @@
     "stupid-replace": "0.0.3",
     "underscore.string": "3.2.2",
     "xyz": "0.5.0",
-    "zaccaria-cli": "0.2.0",
-    "debug": "^2.2.0",
-    "js-yaml": "3.4.6",
-    "liquid-node": "2.6.1"
+    "zaccaria-cli": "0.2.1"
   }
 }
