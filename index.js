@@ -73,7 +73,7 @@ var CustomFileSystem = (function (_liquid$BlankFileSystem) {
 })(liquid.BlankFileSystem);
 
 var main = function () {
-    var usageFileName = "docs/usage.md";
+    var usageFileName = "" + __dirname + "/docs/usage.md";
     $fs.readFileAsync(usageFileName, "utf-8").then(function (it) {
         var _getOptions = getOptions(it);
 

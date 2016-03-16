@@ -44,7 +44,7 @@ class CustomFileSystem extends liquid.BlankFileSystem {
 
 
 var main = () => {
-    const usageFileName = 'docs/usage.md';
+    const usageFileName = `${__dirname}/docs/usage.md`;
     $fs.readFileAsync(usageFileName, 'utf-8').then(it => {
         var {
             help, template, latex, list, json, isAbsolute
